@@ -5,14 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
-    <OutputPath>$(exapiPackage)\</OutputPath>
+    <OutputPath>$(exileCore2Package)\</OutputPath>
   </PropertyGroup>
   <ItemGroup Condition="'$(SolutionName)' == 'ExileApi'">
     <ProjectReference Include="..\..\..\Core\Core.csproj" />
   </ItemGroup>
   <ItemGroup Condition="'$(SolutionName)' != 'ExileApi'">
     <Reference Include="ExileCore">
-      <HintPath>$(exapiPackage)\ExileCore.dll</HintPath>
+      <HintPath>$(exileCore2Package)\ExileCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
