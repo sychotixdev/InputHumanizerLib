@@ -12,11 +12,14 @@ namespace InputHumanizer.Input
         SyncTask<bool> KeyUp(Keys key, bool releaseImmediately = false, CancellationToken cancellationToken = default);
         SyncTask<bool> Click(CancellationToken cancellationToken = default);
         SyncTask<bool> Click(MouseButtons button, CancellationToken cancellationToken = default);
-        SyncTask<bool> Click(MouseButtons button, Vector2 coordinate, CancellationToken cancellationToken = default);
+        SyncTask<bool> Click(MouseButtons button, Vector2? coordinate, CancellationToken cancellationToken = default);
+        SyncTask<bool> ClickWithModifiers(MouseButtons button, Vector2? coordinate, MouseModifiers modifiers, CancellationToken cancellationToken = default);
         SyncTask<bool> VerticalScroll(bool forward, int numClicks, CancellationToken cancellationToken = default);
         SyncTask<bool> VerticalScroll(bool forward, int numClicks, Vector2? coordinate, CancellationToken cancellationToken = default);
         SyncTask<bool> MoveMouse(Vector2 coordinate, CancellationToken cancellationToken = default);
         SyncTask<bool> MoveMouse(Vector2 coordinate, int maxInterpolationDistance, int minInterpolationDelay, int maxInterpolationDelay, CancellationToken cancellationToken = default);
+        SyncTask<bool> ClearMousePosition(CancellationToken cancellationToken = default);
+
         int GenerateDelay();
     }
 }
