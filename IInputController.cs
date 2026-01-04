@@ -2,7 +2,7 @@
 using System.Numerics;
 using System.Threading;
 using System.Windows.Forms;
-using ExileCore2.Shared;
+using ExileCore.Shared;
 
 namespace InputHumanizer.Input
 {
