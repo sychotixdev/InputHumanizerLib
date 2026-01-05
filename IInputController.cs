@@ -19,8 +19,8 @@ namespace InputHumanizer.Input
         SyncTask<bool> MoveMouse(Vector2 coordinate, CancellationToken cancellationToken = default);
         SyncTask<bool> MoveMouse(Vector2 coordinate, int maxInterpolationDistance, int minInterpolationDelay, int maxInterpolationDelay, CancellationToken cancellationToken = default);
         SyncTask<bool> ClearMousePosition(CancellationToken cancellationToken = default);
-
         SyncTask<Vector2?> GetCursorPos(CancellationToken cancellationToken = default);
+        SyncTask<bool> ReleaseControl(CancellationToken cancellationToken = default);
 
         int GenerateDelay();
     }
